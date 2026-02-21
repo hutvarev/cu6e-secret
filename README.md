@@ -2,98 +2,199 @@
 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
 
 
-Physical Security. Not software.
+# CU6E
+**Physical security. Not software.**
 
-"Not a simulation. The other way around."
+> Not a simulation. The other way around.
 
+CU6E is a sealed hardware security environment designed to live on your desk.  
+You place it. You connect it. Your computer changes state.
 
-What is CU6E?
-CU6E is a hardware security device and operating environment.
-You place it on your desk. You plug it in.
-Your computer becomes something else entirely.
-Not a virtual machine. Not an emulator.
-A real isolated environment — running on physics.
+Not a virtual machine.  
+Not an emulator.  
+A physically anchored sandbox running alongside your system.
 
-CU6E SECRET
-The first device in the CU6E lineup.
-Place it on the dock → it connects silently →
-your system enters Inner Place —
-a fully sandboxed environment built on top of your OS,
-not inside it.
-Your screen    → ours
-Your input     → ours  
-Your browser   → ours
-Your files     → compressed, encrypted, protected
+This repository documents the **position** and **public surface** of the platform.  
+Internal implementation details remain undisclosed by design.
 
-The host sees nothing unusual.
-That's the point.
+---
 
-What it does
-True Sandbox
-A real isolated workspace. Not emulated.
-What happens inside stays inside.
-No traces. No logs. No leaks.
-6× Compression + Encryption
-Every file, every session, every byte —
-compressed up to 6× and encrypted simultaneously.
-Not one after the other. At the same time.
-The result is smaller and stronger.
-One Knob Interface
-One physical control on the device.
-Turn → navigate.
-Click → confirm.
-That's the entire interface.
-Everything else is noise.
-Cableless Media Stream
-Built-in media pipeline.
-Stream content to and from the device
-without additional software or configuration.
-Sandboxed Browser
-Our own rendering engine.
-Our own font table.
-Our own input handling.
-Runs over your monitor — not in it.
-No Chromium. No Electron. No bloat.
+## What is CU6E
 
-Hardware
-The device contains proprietary physical components
-sealed at the factory.
-Do not attempt to open the device.
-The security mechanism is physical.
-If the enclosure is breached —
-the magic smoke escapes.
-And magic smoke, once released,
-does not go back in.
-This is not a metaphor.
-This is how it works.
-Warranty:   void upon opening
-Security:   void upon opening  
-Everything: void upon opening
+CU6E is a hardware security device and operating contour.
 
-Product Line
-DevicePriceDescriptionCU6E CERAMIC$1,000Presence sensor. Knows if you're there.CU6E BOY$2,500Dark cube. For those who don't explain.CU6E GIRL$2,500Light cube. Warm from first touch.CU6E FAMILYfrom $3,500Paired bundle. Works only together.CU6E SECRETTBAInner Place. Your computer. Reinvented.
+When docked, it establishes an **isolated working environment** anchored in
+physical hardware rather than software abstraction.
 
-Compatibility
-Windows   ✓
-Linux     ✓
-macOS     ✓ (coming)
-Bare metal ✓
-Minimum requirements: a USB port and curiosity.
+The host system continues to function normally.  
+The secured environment operates in parallel.
 
-Philosophy
-Security systems fail because they trust software.
-Software can be copied. Patched. Reversed. Faked.
-Physics cannot.
-CU6E is built on a principle:
-the secret lives in the hardware, not the algorithm.
-The algorithm is open.
-The hardware is sealed.
-The smoke stays inside.
+No additional drivers.  
+No visible process injection.  
+No conventional UI layer.
 
-Links
+The goal is simple:  
+create a space that exists **with** your machine but not **inside** it.
 
-cu6e.com
-audiovideo.digital
+---
 
+## Operation
 
-Physical truth. In your hands.
+Place device → dock → environment engages.
+
+A separate working state becomes available:
+- input routed through device
+- rendering controlled by device
+- session state isolated
+- storage handled internally
+
+The host remains unaware of internal state transitions by design.
+
+---
+
+## Interface
+
+CU6E uses a minimal physical interface:
+
+- one control surface  
+- rotational navigation  
+- tactile confirmation  
+
+No on-device display.  
+No software dashboard.  
+No secondary UI.
+
+The device is the interface.
+
+---
+
+## Security Position
+
+CU6E assumes that software alone cannot provide durable trust.
+
+Software:
+- can be copied  
+- patched  
+- reversed  
+- simulated  
+
+Physical systems:
+- degrade visibly  
+- resist duplication  
+- reveal tamper  
+- maintain state outside host memory  
+
+CU6E places the critical boundary in hardware.
+
+The algorithm may be inspectable.  
+The enclosure is not.
+
+---
+
+## Enclosure Policy
+
+The device contains sealed physical components.
+
+Opening the enclosure:
+- voids warranty  
+- voids security guarantees  
+- terminates operational integrity  
+
+This behavior is intentional.
+
+The security mechanism is tied to the physical state of the enclosure.
+
+---
+
+## Environment
+
+The internal workspace provides:
+
+**Isolated session state**  
+Activity inside the environment does not rely on host logging or host memory.
+
+**Parallel compression + encryption pipeline**  
+Data processed inside the environment is handled through a unified transform.  
+(Implementation details intentionally undisclosed.)
+
+**Embedded rendering layer**  
+Display and input handling are managed by the device environment.  
+No dependency on mainstream browser engines.
+
+**Local media transport**  
+Direct device pipeline for internal media handling.
+
+---
+
+## Product Classes
+
+Two deployment classes exist:
+
+### SECRET
+Single-node device.
+
+Designed for individual operation.  
+Local isolated workspace.  
+Silent integration with host.
+
+### FAMILY
+Paired configuration.
+
+Two units operating as a coordinated system.  
+Shared state model.  
+Mutual dependency by design.
+
+Further details remain private until release cycle.
+
+---
+
+## Compatibility
+
+Designed to operate alongside:
+
+- Windows  
+- Linux  
+- macOS (planned)  
+- bare metal hosts  
+
+Minimum requirement:  
+a physical connection port and user presence.
+
+---
+
+## Philosophy
+
+Security fails when it exists only in software.
+
+Software is portable.  
+Software is inspectable.  
+Software is replicable.
+
+Physical boundaries behave differently.
+
+CU6E is built on a simple rule:
+
+> The secret lives in hardware.  
+> The algorithm may be open.  
+> The enclosure is closed.
+
+---
+
+## Status
+
+Atelier phase.  
+Limited production cycles.  
+Quiet iteration.
+
+Public documentation will remain minimal.
+
+---
+
+## Links
+
+- https://cu6e.com  
+- https://audiovideo.digital  
+
+---
+
+**Physical truth. In your hands.**
